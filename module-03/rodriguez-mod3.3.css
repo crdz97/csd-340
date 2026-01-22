@@ -1,0 +1,66 @@
+/* 
+Carolina Rodriguez
+CSD-340 Module 3.3 CSS Assignment
+*/
+
+/* Apply font to entire page */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Center the main title */
+h1 {
+    text-align: center;
+}
+
+/* Side-by-side divs */
+.left-div {
+    width: 45%;
+    float: left;
+    border: 1px solid red;      
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.right-div {
+    width: 45%;
+    float: right;
+    border: 1px dashed red;     
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Last div style */
+.bottom-div {
+    width: 100%;
+    margin-top: 60%;
+}
+/* float and 100% width should be separate */
+.bottom-div a {
+    float: right;
+    margin-bottom: 20px;
+}
+
+/* h3 font weight */
+h3 {
+    font-weight: 500;
+}
+
+/* List font weight, line height and list style position */
+ol,
+ul {
+    font-weight: 300;
+    line-height: 1.25;
+    list-style-position: inside;
+}
+
+/* Changing bullets to upper-roman */
+.right-div ul {
+    list-style-type: upper-roman;
+}
+
+/* Link hover underline */
+a:hover {
+    text-decoration: underline;
+}
+
