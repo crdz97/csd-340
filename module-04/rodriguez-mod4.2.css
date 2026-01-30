@@ -1,0 +1,76 @@
+/*
+Carolina Rodriguez
+  CSD 340 Module 4.2 CSS File Assignment
+
+/*
+Resources:
+W3Schools. (n.d.). CSS rgb() function. W3Schools.http://w3schools.com/cssref/func_rgb.php
+W3Schools. (n.d.). CSS grid-template-columns property. W3Schools.https://www.w3schools.com/cssref/pr_grid-template-columns.php
+OpenAI. (n.d.). OpenAI.https://www.openai.com//*
+
+/* Page Font */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Main container */
+#container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Center the h1 text + color */
+h1 {
+    text-align: center;
+    color: rgba(6, 6, 158, 0.9); /* less solid for background */
+}
+
+/* Image gallery grid */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three columns in 1 fraction with repeat function*/
+    margin-top: 10%;
+}
+
+/* Individual gallery items */
+.gallery-item {
+    border:solid #3f2929d3;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Center h3 text + color */
+.gallery-item h3 {
+    text-align: center;
+    color: rgba(47, 3, 91, 0.9); 
+}
+
+/* Center image inside figure */
+figure {
+    text-align: center;
+}
+
+/* Image sizing */
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(140, 2, 119, 0.9);
+    margin-top: 8px;
+}
+
+/* Last div style */
+.bottom-div {
+    text-align: right;
+    margin-top: 30%;
+}
+.bottom-div a {
+    margin-bottom: 20px;
+    
+}
+
