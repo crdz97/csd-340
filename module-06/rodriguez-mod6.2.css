@@ -1,0 +1,99 @@
+/* 
+Carolina Rodriguez
+CSD-340 Module 6.2 CSS Assignment
+*/
+
+header {
+    background-color: #0d3154;  
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* h1 */
+h1 {
+    font-weight: 400;
+}
+
+/* Navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #0d3154; /* Same as header */  
+    border-bottom: solid 15px #0f6150;  
+}
+
+/* Navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+#navbar a:hover {
+    background-color: #0f6150;
+    color: #ffffff;
+}
+
+/* Container */
+#container {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+}
+
+/* Card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+}
+
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Card title */
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: #2C3E50;
+    font-weight: 400;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #0d3154;   /* Same as header */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer paragraph */
+footer p {
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+/* Footer links */
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer link hover */
+footer a:hover {
+    text-decoration: underline;
+}
