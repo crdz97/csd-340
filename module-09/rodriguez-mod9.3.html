@@ -1,0 +1,52 @@
+<!--
+Carolina Rodriguez
+CSD-340 Module 9.3 HTML Assignment
+
+Resources; 
+Sparks, D. (Producer), & Sucsy, M. (Director). (2012). The Vow [Film]. Screen Gems.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="author" content="Caro">
+    <meta name="description"
+        content="Movie dialogue with JavaScript">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="rodriguez-mod2.2.css">
+
+    <script>
+        var word1= "tenderness";
+        var word2= "red velvet cake";
+        var word3= "fiercely";
+        var word4= "soul";
+    </script>
+</head>
+<body>
+    <div id ="container">    
+        <h1> Assignment 9.3: JavaScript - Part 1 </h1>
+        <p>The Vow's Wedding Dialogue</p>
+
+        <p>Paige: I vow to help you love life, to always hold you with <span id= "blank1">_______</span> and to have the patience that love demands, 
+            to speak when words are needed and to share the silence when they are not, to agree to disagree on 
+            <span id= "blank2">______</span>, and to live within the warmth of your heart and always call it home.</p>
+
+        <p>Leo: Wow, you set the bar kind of high. Did you write your vow's on a menu?..</p>
+
+        <p>Paige: Yeah. Why?</p>
+
+        <p>(Leo shows Paige his menu, which is also from their favorite restaurant)</p>
+
+        <p>Leo: I vow to <span id="blank3">_______</span> love you in all your forms, now and forever. I promise to never forget that this is a once in a lifetime love. 
+            And to always know in the deepest part of my <span id="blank4">_______</span> that no matter what challenges might carry us apart, that we'll always find our way back to each other.</p>
+
+        <button type="button" onclick="document.getElementById('blank1').innerHTML= word1">Reveal blank 1</button>
+        <button type="button" onclick="document.getElementById('blank2').innerHTML= word2">Reveal blank 2</button>
+        <button type="button" onclick="document.getElementById('blank3').innerHTML= word3">Reveal blank 3</button>
+        <button type="button" onclick="document.getElementById('blank4').innerHTML= word4">Reveal blank 4</button>
+    </div>
+</body>
+</html>
+
