@@ -1,0 +1,74 @@
+<!-- Carolina Rodriguez 
+ Assignment 10.3: JavaScript - Part 2 
+ 
+ Resources:
+    Emojipedia. (n.d.). Backhand index pointing down emoji. Emojipedia.https://emojipedia.org/backhand-index-pointing-down-light-skin-tone/
+    W3Schools. (n.d.). HTML DOM Element innerHTML property. W3Schools.https://www.w3schools.com/jsref/prop_html_innerhtml.asp
+    W3Schools. (n.d.). onclick Event. W3Schools. https://www.w3schools.com/jsref/event_onclick.asp
+ Pictures:
+    Henry Cavill as Superman [Screenshot]. (2022, December 15). E! Online. https://akns-images.eonline.com/eol_images/Entire_Site/20221115/rs_634x1024-221215041817-634-Henry_Cavill_as_Superman.jpg
+    mirae_lune [@mirae_lune]. (2026, March 5). Threads post with image [Image] [Post]. Threads. https://www.threads.com/@mirae_lune/post/DVb279tDf8i
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="author" content="Caro">
+    <meta name="description"
+        content="Movie dialogue with JavaScript">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="rodriguez-mod10.3.css">
+
+<script>
+
+    function displayImage() {
+    var image = document.getElementById("mainImage");
+
+    if(image.src.includes("superman.jpg")){ // Check if the current image is Superman
+        image.src = "clark.jpg";
+    } else { // If it's not Superman, change it back to Superman
+        image.src = "superman.jpg";
+    }
+}
+// Enlarge the text when clicked
+        function enlargeText() {
+            var textElement = document.getElementById("clickableText");
+
+            if (textElement.innerHTML === "Click me!") { //innerHTML is used to change the content of the element
+                textElement.innerHTML = "He's Clark Kent!"; // Change the text to reveal Clark Kent's identity
+                textElement.style.fontSize = "40px";
+            
+            } else {
+                //reset the text and font size to original
+                textElement.innerHTML = "Click me!"; 
+                textElement.style.fontSize = "20px";    
+            }
+        }
+</script>
+    
+</head>
+<body>  
+    <h1> Assignment 10.3: JavaScript - Part 2 </h1>
+    <div>
+<br /> 
+            Click the image below 👇🏻 to reveal Superman's true identity!
+<br/><br />
+
+<div>
+    <img id="mainImage"
+        src="superman.jpg"  
+        style="width: 400px; height: 500px;" 
+        onclick="displayImage()" /> <!-- Image with an onclick event to toggle between Superman and Clark Kent -->
+
+<br><br>
+<!-- Clickable text to enlarge the font size -->
+    <p id="clickableText" onclick="enlargeText()">Click me!</p>
+
+
+    </div>
+</body>
+</html>
