@@ -1,0 +1,100 @@
+<!-- Carolina Rodriguez
+ Assignment 11.2: JavaScript - Part 3
+
+ Resources: 
+ GreatStack. (2023, March 20). How to create a to‑do list app using HTML CSS and JavaScript [Video]. YouTube.https://www.youtube.com/watch?v=G0jO8kUrg-I
+ W3Schools. (n.d.). How To Create a To Do List. W3Schools. https://www.w3schools.com/howto/howto_js_todolist.asp
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="author" content="Caro">
+    <meta name="description"
+        content="Movie dialogue with JavaScript">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rodriguez-mod11.2.css">
+<script>
+//Array to hold the input in to do list items
+var listArray = [];
+
+function addItem() {
+
+    var item = document.getElementById("userInput").value;
+//empty string 
+    if (item == "") {
+        alert("Please enter something.");
+        return;
+    }
+//add the item to the array
+    listArray.push(item);
+
+    alert(item + " was added.");
+
+//clear input box after adding the item
+    document.getElementById("userInput").value = "";
+
+    displayItems();
+}
+
+function deleteLast() {
+//empty array check before deleting the last item
+    if (listArray.length == 0) {
+        alert("There is nothing to delete.");
+        return;
+    }
+
+    var removed = listArray.pop(); //removes last array item
+
+    alert(removed + " was deleted.");
+
+    displayItems();
+}
+
+function sortItems() {
+
+    listArray.sort();
+
+    alert("The list has been sorted.");
+
+    displayItems();
+}
+
+function displayItems() {
+
+    var output = "";
+
+    for (var i = 0; i < listArray.length; i++) {
+        output += (i + 1) + ". " + listArray[i] + "<br>"; //number list with break after each item
+    }
+
+    document.getElementById("displayList").innerHTML = output;
+}
+
+</script>
+</head>
+<body> 
+    <h1> Assignment 11.2: JavaScript - Part 3 </h1>
+
+<p>Enter an item to add to your To Do list.</p>
+
+<input type="text" id="userInput" placeholder="Enter a task...">
+
+<button onclick="addItem()">Add</button>
+<button onclick="deleteLast()">Delete Last Entry</button>
+<button onclick="sortItems()">Sort Alphabetically</button>
+
+<h3>Things To Do:</h3>
+<div id="displayList"></div>
+
+
+
+</body>
+</html>
